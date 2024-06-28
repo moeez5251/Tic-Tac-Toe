@@ -8,11 +8,145 @@ body{
     background-color: aquamarine;
     width: 100%;
     height: 100%;
+    z-index: -10;
+}
+.loa{
+  position: fixed;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 100;
+}
+.loader1 {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border: 3px solid rgba(0, 102, 255, 0.1);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 150px;
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #0066ff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #0066ff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+ 
+}
+
+.loader1::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 3px solid #0066ff;
+  border-right: 3px solid #0066ff;
+  border-radius: 50%;
+  animation: animateC 2s linear infinite;
+}
+
+.loader1 span {
+  display: block;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  background: transparent;
+  transform-origin: left;
+  animation: animate 2s linear infinite;
+}
+
+.loader1 span::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #00aeff;
+  top: -6px;
+  right: -8px;
+  box-shadow: 0 0 20px 5px #0066ff;
+}
+
+@keyframes animateC {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: rotate(405deg);
+  }
+}
+.loader{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  z-index: 10;
+  top: 0%;
+  transition: all 2s;
+}
+.head{
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  position: relative;
+  top: 35%;
+  text-align: center;
+  animation: moving 4s 1 linear;
+}
+@keyframes moving {
+    0%{
+        top: 35%;
+    }
+    100%{
+      top: 39%;
+    }
+}
+.img{
+  position: relative;
+  top: 30%;
+  text-align: center;
+  animation: mov 4s 0s linear 1;
+  
+}
+@keyframes mov {
+  0%{
+      top: 30%;
+  }
+  100%{
+    top: 28%;
+  }
+}
+.image{
+  width: 100px;
+  height: 100px;
 }
 .theme{
   position: absolute;
   top: 4%;
   right: 28px;
+  font-family: "Ubuntu", sans-serif;
+  
 }
 .btn-container {
   display: table-cell;
@@ -153,6 +287,8 @@ label {
     height: 103px;
     font-size: 45px;
     text-align: center;
+  font-family: "Ubuntu", sans-serif;
+
 }
 .btns:disabled{
   color: black;

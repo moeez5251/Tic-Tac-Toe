@@ -1,3 +1,16 @@
+let loader=document.querySelector('.loa');
+let load1=document.querySelector('.loader');
+function load() {
+    setTimeout(() => {
+        document.querySelector('body').removeChild(loader);
+
+    }, 2000);
+
+}
+setTimeout(() => {
+    load1.style.top='-100%';
+}, 2800);
+
 let btns=document.querySelectorAll('.btns');
 let text=document.getElementById('text');
 var current_value='X';
