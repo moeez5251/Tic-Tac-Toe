@@ -112,7 +112,7 @@ body{
   position: relative;
   top: 35%;
   text-align: center;
-  animation: moving 4s 1 linear;
+  animation: moving 3s 1 2s  linear;
 }
 @keyframes moving {
     0%{
@@ -126,17 +126,9 @@ body{
   position: relative;
   top: 30%;
   text-align: center;
-  animation: mov 4s 0s linear 1;
   
 }
-@keyframes mov {
-  0%{
-      top: 30%;
-  }
-  100%{
-    top: 28%;
-  }
-}
+
 .image{
   width: 100px;
   height: 100px;

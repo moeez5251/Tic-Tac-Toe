@@ -4,12 +4,12 @@ function load() {
     setTimeout(() => {
         document.querySelector('body').removeChild(loader);
 
+        setTimeout(() => {
+            load1.style.top='-100%';
+        }, 700);
     }, 2000);
 
 }
-setTimeout(() => {
-    load1.style.top='-100%';
-}, 2800);
 
 let btns=document.querySelectorAll('.btns');
 let text=document.getElementById('text');
