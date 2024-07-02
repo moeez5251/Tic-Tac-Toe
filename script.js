@@ -21,7 +21,6 @@ for(let i=0;i<btns.length;i++){
         btns[i].disabled=true;
         move();
        if (allselected()) {
-        
             for(let i=0;i<btns.length;i++){
                 btns[i].classList.add('animate');
             }
