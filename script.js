@@ -6,6 +6,8 @@ function load() {
 
         setTimeout(() => {
             load1.style.top='-100%';
+            document.getElementById("x").innerHTML=0;
+            document.getElementById("y").innerHTML=0;
         }, 700);
     }, 2000);
 
@@ -53,8 +55,20 @@ function check_for_win() {
 function move(){
     if(check_for_win()){
         text.innerHTML="Player "+current_value+' win';
-      current_value=current_value==='X' ? 'O ': 'X';
+        console.log( current_value);
 
+        if (current_value=='X') {
+            ++document.getElementById("x").innerHTML;
+         
+        
+        }
+        else{
+            console.log( current_value);
+            ++document.getElementById("y").innerHTML;
+
+        }
+
+            current_value=current_value==='X' ? 'O ': 'X';
     }
     else{
       current_value=current_value==='X' ? 'O ': 'X';

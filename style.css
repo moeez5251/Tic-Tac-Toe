@@ -133,12 +133,33 @@ body{
   width: 100px;
   height: 100px;
 }
+.scores{
+  display: flex;
+    margin-left: 50px;
+    justify-content: space-between;
+    width: 7%;
+    position: relative;
+    top: 56px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+}
+@media screen and (max-width:600px) {
+  .scores{
+    margin-left: 10px;
+    flex-direction: column;
+  }
+}
+.X,.Y{
+  display: flex;
+    padding: 0px 17px;
+}
 .theme{
   position: absolute;
   top: 4%;
   right: 28px;
   font-family: "Ubuntu", sans-serif;
-  
+  font-weight: 500;
 }
 .btn-container {
   display: table-cell;
@@ -405,6 +426,9 @@ label {
           background-color: white;
           color: black;
           }
+          .scores{
+            color: white;
+          }
   }
 
   .animate{
@@ -428,7 +452,7 @@ label {
   }
   @media screen and (max-width:500px) {
     .container{
-      margin-top: 40%;
+      margin-top: 30%;
     }
     .textarea{
       top: 12%;
@@ -444,6 +468,13 @@ label {
   }
   @media screen and (max-width:320px) {
     .container{
-      margin-top: 80%;
+      margin-top: 20%;
+    }
+    .scores{
+      margin-left: -9px;
+      font-size: 24px;
+    }
+    .btns{
+      width: 75px;;
     }
   }
